@@ -19,6 +19,7 @@ for ($i =0; $i<$testcase; $i++) {
 foreach ($case as $key => $value) {
     fprintf(STDOUT, 'Case ');
     fprintf(STDOUT, $key+1 .PHP_EOL);
+    fprintf(STDOUT, ':' .PHP_EOL);
     foreach ($value as $alpha => $times) {
         fprintf(STDOUT, $alpha. ' '. $times.PHP_EOL);
     }
