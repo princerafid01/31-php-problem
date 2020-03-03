@@ -4,7 +4,7 @@ $stdout = fopen('php://stdout', 'w');
 
 function isPrime($num)
 {
-    if ($num < 2) {
+    if ($num < 2) { // 0 or 1
         return false;
     }
     for ($i = 2; $i <= $num / 2; $i++) {
