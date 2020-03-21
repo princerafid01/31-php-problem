@@ -17,15 +17,17 @@ function isPrime($num)
 
 fscanf(STDIN, "%d", $testcase); // reads number from STDIN
 $case = [];
-for ($i =0; $i<$testcase; $i++) {
-    $number = readline();
+for ($i=0; $i<$testcase; $i++) {
+    // $number = readline();
+    fscanf(STDIN, "%d", $number); // reads number from STDIN
+
     if (isPrime($number)) {
-        $case[] = 'Yes';
+        echo 'Yes'.PHP_EOL;
     } else {
-        $case[] = 'No';
+        echo 'No'.PHP_EOL;
     }
 }
 
-foreach ($case as $value) {
-    fprintf(STDOUT, $value.PHP_EOL);
-}
+    // foreach ($case as $value) {
+    //     fprintf(STDOUT, $value.PHP_EOL);
+    // }
