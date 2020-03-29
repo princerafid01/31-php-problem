@@ -27,12 +27,16 @@ for ($i =0; $i<$testcase; $i++) {
         $count++;
     }
 
-    $case[] = $count;
+    // $case[] = $count;
+    fprintf(STDOUT, 'Case ');
+    fprintf(STDOUT, $i+1);
+    fprintf(STDOUT, ": ");
+    fprintf(STDOUT, $count.PHP_EOL);
 }
 
-foreach ($case as $key => $value) {
-    fprintf(STDOUT, 'Case ');
-    fprintf(STDOUT, $key+1);
-    fprintf(STDOUT, ": ");
-    fprintf(STDOUT, $value.PHP_EOL);
-}
+// foreach ($case as $key => $value) {
+//     fprintf(STDOUT, 'Case ');
+//     fprintf(STDOUT, $key+1);
+//     fprintf(STDOUT, ": ");
+//     fprintf(STDOUT, $value.PHP_EOL);
+// }

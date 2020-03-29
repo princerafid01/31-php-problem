@@ -9,12 +9,12 @@ for ($i =0; $i<$testcase; $i++) {
     $reversed = strrev($main);
 
     if ($main == $reversed) {
-        $case[] = 'Yes';
+        echo 'Yes'."\n";
     } else {
-        $case[] = 'No';
+        echo 'No'."\n";
     }
 }
 
-foreach ($case as $value) {
-    fprintf(STDOUT, $value.PHP_EOL);
-}
+// foreach ($case as $value) {
+//     fprintf(STDOUT, $value.PHP_EOL);
+// }

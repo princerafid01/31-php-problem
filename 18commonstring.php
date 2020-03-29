@@ -38,12 +38,13 @@ function commonString($first, $second)
     return "";
 }
 
-
+$count = 0;
 for ($i =0; $i<$testcase; $i++) {
+    $count++;
     fscanf(STDIN, "%s %s", $one, $two);  // %s for string, %lf for double, %f float
-    $case[] = 'Case X: ' . strlen(commonString($one, $two));
+    echo 'Case '. $count .': ' . strlen(commonString($one, $two)) ."\n";
 }
 
-foreach ($case as $value) {
-    fprintf(STDOUT, $value.PHP_EOL);
-}
+// foreach ($case as $value) {
+//     fprintf(STDOUT, $value.PHP_EOL);
+// }

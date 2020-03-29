@@ -2,14 +2,15 @@
 $stdin = fopen('php://stdin', 'r');
 $stdout = fopen('php://stdout', 'w');
 fscanf(STDIN, "%d", $testcase); // reads number from STDIN
-$case = [];
 for ($i =0; $i<$testcase; $i++) {
     $text = readline();
+
+
     $arr = str_split($text);
     $arr_r = array_reverse($arr);
-    $case[] = implode('', $arr_r);
+    echo implode('', $arr_r). "\n";
 }
 
-foreach ($case as $value) {
-    fprintf(STDOUT, $value.PHP_EOL);
-}
+// foreach ($case as $value) {
+//     fprintf(STDOUT, $value.PHP_EOL);
+// }

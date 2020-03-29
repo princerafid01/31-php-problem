@@ -9,17 +9,15 @@ fscanf(STDIN, "%d", $testcase); // reads number from STDIN
 $case = [];
 for ($i =0; $i<$testcase; $i++) {
     fscanf(STDIN, "%f %f", $r, $s);  // %s for string, %lf for double, %f float
-    $r = abs($r);
-    $s = abs($s);
     $diameter = twoDecimalePlace($r *2);
     $diagonal = twoDecimalePlace($s * sqrt(2));
     if ($diameter === $diagonal) {
-        $case[] = 'Yes';
+        echo 'Yes'."\n";
     } else {
-        $case[] = 'No';
+        echo 'No'."\n";
     }
 }
 
-foreach ($case as $value) {
-    fprintf(STDOUT, $value.PHP_EOL);
-}
+// foreach ($case as $value) {
+//     fprintf(STDOUT, $value.PHP_EOL);
+// }

@@ -7,12 +7,14 @@ for ($i =0; $i<$testcase; $i++) {
     fscanf(STDIN, "%d", $maximum);
     $url= readline();
     //lower case  all letter
-    $url = substr($url, 0, $maximum);
-    $sanitized_url = trim(preg_replace('/[^a-z0-9]+/', '-', strtolower($url)), '-');
 
-    $case[] = $sanitized_url;
-}
+    //--I am Rahat from BD
+    $data = str_replace("\t", '-', $url);
+    $new_url = preg_replace('/[^A-Za-z0-9\-]/', '-', strtolower($data));
+    //-i-am-rahat-from-bd
+    $new_url = trim(preg_replace('~-{2,}~', '-', $new_url), '-');
 
-foreach ($case as $key => $value) {
-    fprintf(STDOUT, $value.PHP_EOL);
+    $pro_url =  trim(substr($new_url, 0, $maximum), '-');
+
+    echo $pro_url.PHP_EOL;
 }
